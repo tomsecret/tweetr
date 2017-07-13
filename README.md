@@ -13,7 +13,9 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Screenshots
 
-
+!['Screenshot of tweet compose box'](https://github.com/tomsecret/tweetr/blob/master/docs/tweet-textbox.png)
+!['Screenshot of tweet UI'](https://github.com/tomsecret/tweetr/blob/master/docs/tweet-UI.png)
+!['Screenshot of tweet character counter in action'](https://github.com/tomsecret/tweetr/blob/master/docs/tweet-counter.png)
 ## Dependencies
 
 - Express
