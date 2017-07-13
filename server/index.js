@@ -18,9 +18,11 @@ app.use(express.static("public"));
 
 ///mongo
 MongoClient.connect(MONGODB_URI, (err, mongoExample) => {
+  if (err) {
+    console.error(`Failed to connect: ${MONGODB_URI}`);
+    throw err;
+  }
 
-
-  // We have a connection to the "tweeter" db, starting here.
   console.log(`Connected to mongodb: ${MONGODB_URI}`);
 
   const db = mongoExample;
@@ -30,8 +32,6 @@ MongoClient.connect(MONGODB_URI, (err, mongoExample) => {
   const tweetsRoutes = require("./routes/tweets")(DataHelpers);
 
   app.use("/tweets", tweetsRoutes);
-    // This is the end...
-  // mongoExample.close();
 });
 
 
