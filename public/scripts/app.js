@@ -66,7 +66,7 @@ function createTweetElement(data) {
   var milliseconds = (new Date).getTime();
   var d = Math.floor((milliseconds - data.created_at) / (1000 * 60 * 60 * 24)) ;
   var escaped = escape(data.content.text);
-  var tweet = `<article class="tweet">
+  var tweet = `<article class="tweet newtweet">
                 <header>
                   <img class='user' src=${data.user.avatars.small}>
                   <span class="tweet-name">${data.user.name}</span>

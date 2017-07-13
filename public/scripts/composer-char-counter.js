@@ -3,11 +3,11 @@ $(document).ready(function() {
   $('textarea').on('input',function(event) {
     var remain = 140 - $(this).val().length;
     if (remain >= 0) {
-      $(this).parent().children('.counter').text(remain);
-      $(this).parent().children('.counter').css("color", "");
+      $('.counter').text(remain);
+      $('.counter').css("color", "");
     } else {
-      $(this).parent().children('.counter').text(remain);
-      $(this).parent().children('.counter').css("color", "red");
+      $('.counter').text(remain);
+      $('.counter').css("color", "red");
     };
   });
 
@@ -34,7 +34,8 @@ $(document).ready(function() {
         method: 'POST',
         url: '/tweets',
         data: $(this).serialize()
-      }).then(localTweets).then( function() {
+      }).then( function () {
+        $('.tweet.newtweet').remove()}).then(localTweets).then( function() {
         $('.counter').text('140');
         $('textarea').val('').blur();
       })
