@@ -55,8 +55,6 @@
 
 function renderTweets(tweets) {
   // loops through tweets
-    // calls createTweetElement for each tweet
-    // takes return value and appends it to the tweets container
     for (i in tweets) {
       $tweet = createTweetElement(tweets[i]);
       $('#tweet-display').prepend($tweet);
@@ -65,7 +63,6 @@ function renderTweets(tweets) {
 
 
 function createTweetElement(data) {
-  // var $tweet = $("<article>").addClass("tweet");
   var milliseconds = (new Date).getTime();
   var d = Math.floor((milliseconds - data.created_at) / (1000 * 60 * 60 * 24)) ;
   var escaped = escape(data.content.text);
@@ -106,9 +103,6 @@ function localTweets() {
 }
 
 
-// Test / driver code (temporary)
-// to see what it looks like
 $(document).ready(function () {
-  // renderTweets(data);
   localTweets()
-}); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
+});
