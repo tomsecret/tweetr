@@ -11,6 +11,8 @@ This repository is the starter code for the project: Students will fork and clon
 3. Go to <http://localhost:8080/> in your browser.
 4. To compose new tweet, click on 'compose' then the textarea will show up.
 
+## Screenshots
+
 
 ## Dependencies
 
